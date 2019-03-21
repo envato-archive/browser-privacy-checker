@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import { checkUseLocalStorage } from './utils'
 
-const useLocalStorageChecker = () => {
+export const useLocalStorageChecker = () => {
   const [canUseLocalStorage, updateLocalStorageState] = useState(false)
 
   useEffect(() => {
@@ -10,5 +10,3 @@ const useLocalStorageChecker = () => {
   }, [])
   return canUseLocalStorage
 }
-
-export default useLocalStorageChecker

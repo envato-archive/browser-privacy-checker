@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import { checkUseCookie } from './utils'
 
-const useCookieChecker = () => {
+export const useCookieChecker = () => {
   const [canUseCookie, updateCookieState] = useState(false)
 
   useEffect(() => {
@@ -10,5 +10,3 @@ const useCookieChecker = () => {
   }, [])
   return canUseCookie
 }
-
-export default useCookieChecker
