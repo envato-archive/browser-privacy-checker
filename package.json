@@ -1,0 +1,32 @@
+{
+  "name": "@envato/browser-privacy-checker",
+  "version": "0.0.1",
+  "description": "Handy React modules to check whether can use user cookie and similar technologies from browser",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^16.8.4",
+    "typescript": "^3.3.4000"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/envato/browser-privacy-checker.git"
+  },
+  "keywords": [
+    "cookie",
+    "localstorage",
+    "react",
+    "hooks",
+    "privacy",
+    "browser"
+  ],
+  "author": "npm@envato.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/envato/browser-privacy-checker/issues"
+  },
+  "homepage": "https://github.com/envato/browser-privacy-checker#readme"
+}
