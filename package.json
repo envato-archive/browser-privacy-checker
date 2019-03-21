@@ -2,14 +2,21 @@
   "name": "@envato/browser-privacy-checker",
   "version": "0.0.1",
   "description": "Handy React modules to check whether can use user cookie and similar technologies from browser",
-  "main": "index.js",
+  "main": "dist/index.js",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^11.11.4",
+    "@types/react": "^16.8.8",
     "react": "^16.8.4",
     "typescript": "^3.3.4000"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
