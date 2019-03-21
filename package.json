@@ -13,6 +13,9 @@
   "files": [
     "dist"
   ],
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc",
