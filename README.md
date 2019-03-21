@@ -10,26 +10,55 @@ npm i @envato/browser-privacy-checker
 
 ### Usage
 
-Cookie checker
+#### Use as React 🎣
+
+- Cookie checker
+- LocalStorage checker
 
 ```jsx
-import { useCookieChecker } from '@envato/browser-privacy-checker'
+import {
+  useCookieChecker,
+  useLocalStorageChecker
+} from '@envato/browser-privacy-checker'
 
 const MyApp = () => {
   const canUseCookie = useCookieChecker()
+  const canUseLocalStorage = useLocalStorageChecker()
 
-  return <span>{canUseCookie}</span>
+  return (
+    <>
+      <span>{canUseCookie}</span>
+      <span>{canUseLocalStorage}</span>
+    </>
+  )
 }
 ```
 
-LocalStorage checker
+#### Show banner when cookie/localstorage blocked
 
 ```jsx
-import { useLocalStorageChecker } from '@envato/browser-privacy-checker'
+import { PrivacyBanner } from '@envato/browser-privacy-checker'
 
 const MyApp = () => {
-  const canUseLocalStorage = useLocalStorageChecker()
-
-  return <span>{canUseLocalStorage}</span>
+  return (
+    <div>
+      <PrivacyBanner />
+      <PrivacyBanner>
+        <MyCustomerBanner />
+      </PrivacyBanner>
+    </div>
+  )
 }
+```
+
+#### Use as utils
+
+```js
+import {
+  checkUseLocalStorage,
+  checkUseCookie
+} from '@envato/browser-privacy-checker'
+
+checkUseCookie()
+checkUseLocalStorage()
 ```
