@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import { useCookieChecker, useLocalStorageChecker } from '.'
 
@@ -14,19 +14,21 @@ const textStyle = {
   padding: '10px'
 }
 
-const DefaultBanner = () => {
-  return (
-    <div className="browser-privacy-checker-container" style={containerStyle}>
-      <p className="browser-privacy-checker-text" style={textStyle}>
-        Your browser appears to block all cookies. This site requires some
-        cookies to function correctly. Please review your brower settings before
-        continuing.
-      </p>
-    </div>
-  )
+const DefaultBanner = () => (
+  <div className="browser-privacy-checker-container" style={containerStyle}>
+    <p className="browser-privacy-checker-text" style={textStyle}>
+      Your browser appears to block all cookies. This site requires some cookies
+      to function correctly. Please review your brower settings before
+      continuing.
+    </p>
+  </div>
+)
+
+export interface IBannerProps {
+  children?: React.ReactNode
 }
 
-export const PrivacyBanner = ({ children }: { children?: React.ReactNode }) => {
+export const PrivacyBanner = ({ children }: IBannerProps) => {
   const canUseCookie = useCookieChecker()
   const canUseLocalStorage = useLocalStorageChecker()
 
@@ -34,5 +36,5 @@ export const PrivacyBanner = ({ children }: { children?: React.ReactNode }) => {
 
   if (!shouldShowBanner) return null
 
-  return children ? children : <DefaultBanner />
+  return children ? { children } : <DefaultBanner />
 }
