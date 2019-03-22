@@ -34,5 +34,5 @@ export const PrivacyBanner = ({ children }: { children?: React.ReactNode }) => {
 
   if (!shouldShowBanner) return null
 
-  return children ? DefaultBanner : children
+  return children ? children : <DefaultBanner />
 }
