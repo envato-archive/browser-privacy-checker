@@ -30,7 +30,7 @@ export const PrivacyBanner = ({ children }: { children?: React.ReactNode }) => {
   const canUseCookie = useCookieChecker()
   const canUseLocalStorage = useLocalStorageChecker()
 
-  const shouldShowBanner = canUseCookie && canUseLocalStorage
+  const shouldShowBanner = !canUseCookie && !canUseLocalStorage
 
   if (!shouldShowBanner) return null
 
