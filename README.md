@@ -12,8 +12,8 @@ npm i @envato/browser-privacy-checker
 
 #### Use as React 🎣
 
-- Cookie checker
-- LocalStorage checker
+- Cookie checker hook: `useCookieChecker`
+- LocalStorage checker hook: `useLocalStorageChecker`
 
 ```jsx
 import {
