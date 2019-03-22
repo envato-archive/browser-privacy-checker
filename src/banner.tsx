@@ -36,5 +36,5 @@ export const PrivacyBanner = ({ children }: IBannerProps) => {
 
   if (!shouldShowBanner) return null
 
-  return children ? { children } : <DefaultBanner />
+  return children ? <>{children}</> : <DefaultBanner />
 }
