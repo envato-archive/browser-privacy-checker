@@ -36,6 +36,10 @@ const MyApp = () => {
 
 #### Show banner when cookie/localstorage blocked
 
+Screenshot:
+![screenshot](https://user-images.githubusercontent.com/1183541/54971930-1e865e80-4fdd-11e9-9f9d-487ac1448cf1.png)
+
+
 ```jsx
 import { PrivacyBanner } from '@envato/browser-privacy-checker'
 
